@@ -1,6 +1,6 @@
 <template>
   <div>
-    <a v-on:><span class="material-icons" id="menu"> menu </span></a>
+    <span class="material-icons" id="menu"> menu </span>
     <img
       src="https://minio.lattehub.com/img/600/744/resize/60bdc849e0db61849045908f/2021/06/07/lattehub-image-60bdd1cef27e5925329a45c9.png"
       width="150pc"
@@ -80,7 +80,9 @@
   </div>
 </template>
 <script>
-export default {};
+
+export default {
+};
 </script>
 <style scoped lang='css'>
 #menu{
