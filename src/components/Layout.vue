@@ -78,16 +78,13 @@
         <br>
         <div class="title"><h2 >Best Selling</h2><button><a href="#">VIEW MORE</a></button> </div>
         <BestSelling/>
-        <Banner2/>
         <DressBanner/>
         <br>
         <br>
         <div class="title"><h2 >Look we love</h2><button><a href="#">VIEW MORE</a></button> </div>
         <BestSelling/>
         <div class="title"><h2>Store best sellers</h2></div>
-        <BestSelling2/>
         <div class="title"><h2>Recently viewed & featured recommendations</h2></div>
-        <BestSelling2/>
         <SizeBanner/>
         <Review/>
     </div>
@@ -99,10 +96,8 @@
 </template>
 <script>
 import Banner from './Banner.vue'
-import Banner2 from './Banner2.vue'
 import CollectionList from './CollectionList.vue'
 import BestSelling from './BestSelling.vue'
-import BestSelling2 from './BestSelling2.vue'
 import DressBanner from './DressBanner.vue'
 import SizeBanner from './SizeBanner.vue'
 import Footer from './Footer.vue'
@@ -110,10 +105,8 @@ import Review from './Review.vue'
 export default {
     components: {
     Banner,
-    Banner2,
     CollectionList,
     BestSelling,
-    BestSelling2,
     DressBanner,
     SizeBanner,
     Footer,
@@ -288,6 +281,8 @@ border-top:0.001pc solid lightgray ;
   }
   .search{
     width: 1pc;
+    border: none;
+     background-position: 0pc 0pc; 
   }
   .center{
   padding-left:0% ;
@@ -296,10 +291,13 @@ border-top:0.001pc solid lightgray ;
 }
 .row-header{
   padding-left:0 ;
+  align-items: center;
 }
 .row-header .search{
+  margin-top:1px;
   padding-right: 0pc;
   margin-right: 0pc;
+  height: 1pc;
 }
 .header{
   width: 90%;
@@ -307,9 +305,59 @@ border-top:0.001pc solid lightgray ;
 .row-header button{
   display: none;
 }
+.title{
+  flex-direction: column;
+  align-items: center;
+}
+.title button{
+  width: 10pc;
+  height: 2pc;
+}
 }
 
 @media (max-width: 600px) {
+   .navbar{
+     opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+ .search{
+    width: 1pc;
+    border: none;
+    background-position: 0pc 0pc; 
+  }
+  .center{
+  padding-left:0% ;
+  padding-right: 0%;
+}
+.row-header{
+  align-items: center;
+  padding-left:0 ;
+  padding: 0;
+  margin: 0;
+}
+.row-header .search{
+   margin-top:1px;
+  padding-right: 0pc;
+  margin-right: 0pc;
+  height: 1pc;
+}
+.header{
+  width: 90%;
+}
+.row-header button{
+  display: none;
+}
+.title{
+  flex-direction: column;
+  align-items: center;
+}
+.title button{
+  width: 10pc;
+  height: 2pc;
+}
+}
+@media (max-width: 375px) {
    .navbar{
      opacity: 0;
     visibility: hidden;
@@ -323,19 +371,30 @@ border-top:0.001pc solid lightgray ;
   padding-right: 0%;
 }
 .row-header{
+  align-items: center;
   padding-left:0 ;
   padding: 0;
   margin: 0;
 }
 .row-header .search{
+   margin-top:1px;
   padding-right: 0pc;
   margin-right: 0pc;
+  height: 1pc;
 }
 .header{
   width: 90%;
 }
 .row-header button{
   display: none;
+}
+.title{
+  flex-direction: column;
+  align-items: center;
+}
+.title button{
+  width: 10pc;
+  height: 2pc;
 }
 }
 </style>
