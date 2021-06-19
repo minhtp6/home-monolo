@@ -46,6 +46,8 @@ export default {
   font-size: 120%;
   width: 65%;
   margin-left: 25%;
+  margin-top: 0%;
+  padding-top: 0%;
 }
 p{
     overflow: hidden;
@@ -99,6 +101,7 @@ button{
 }
 .col td{
    width: 180px; 
+   height: 100px;
    display: flexbox;
 }
 .col td img {

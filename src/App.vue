@@ -9,6 +9,8 @@
     <br>
     <div class="barHome"><b class="titleHome">Best Selling</b><button class="buttonHome">VIEW MORE</button> </div>
     <BestSelling/>
+    <br>
+    <img src="https://minio.lattehub.com/img/2000/2000/resize/60bdc849e0db61849045908f/2021/06/11/lattehub-image-60c2dec02f33d2dfe21c6b17.png" height="15%" width="100%">
     <Footer />
   </div>
 </template>
@@ -76,6 +78,8 @@ export default {
 }
 .barHome{
   padding-top: 1%;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
 }
 .buttonHome{
   margin-left: 36%;
@@ -86,6 +90,10 @@ export default {
   font-weight: bold;
   width: 10%;
   height: 3pc;
+}
+img{
+  padding: 0;
+  margin: 0;
 }
 @media screen and (max-width: 600px) {
   #app{
