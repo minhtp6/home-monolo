@@ -226,6 +226,7 @@ export default {
   margin-top: 10%;
   background-color: white;
   width: 100%;
+  margin-bottom: 0%;
 }
 .footer-custom {
   color: black;
@@ -318,6 +319,7 @@ hr {
   }
   #footerMobile {
     display: block;
+    margin-bottom: 0%;
   }
   ul {
     display: none;
