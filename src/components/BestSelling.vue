@@ -1,6 +1,6 @@
 <template>
   <span class="col">
-    <td v-for="(item,key) in items" :item="item" :key="key" id="web" style="padding-right: 3%">
+    <td v-for="(item,key) in items" :item="item" :key="key" id="web" style="padding-right: 2pc">
         <img :src="item.img"/>
         <p class="title">{{item.title}}</p>
         <p class="price">{{item.price}}</p>
@@ -44,14 +44,14 @@ export default {
   text-align: center;
   font-weight: bold;
   font-size: 120%;
-  width: 60%;
-  padding-left: 25%;
+  width: 65%;
+  margin-left: 25%;
 }
 p{
     overflow: hidden;
 }
 .col td{
-   width: 235px; 
+   width: 240px; 
    position: relative;
 }
 .col td:hover button{
@@ -86,5 +86,28 @@ button{
   height: 2.5pc;
   margin-top: 1%;
   margin-bottom: 3%;
+}
+@media screen and (max-width: 600px) {
+    .col {
+  display: flexbox;
+  text-align: center;
+  font-weight: bold;
+  font-size: 120%;
+  width: 100%;
+  margin: 10px;
+  overflow: hidden;
+}
+.col td{
+   width: 180px; 
+   display: flexbox;
+}
+.col td img {
+  width: 150px;
+  height: 150px;
+  margin-right: 10px;
+}
+button{
+    visibility: visible;
+}
 }
 </style>

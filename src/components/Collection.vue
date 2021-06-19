@@ -58,6 +58,7 @@ export default {
   font-size: 120%;
   width: 55%;
   padding-left: 25%;
+  
 }
 .col td img {
   width: 100%;
