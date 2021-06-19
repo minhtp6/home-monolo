@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span class="material-icons" id="menu"> menu </span>
+    <span class="material-icons" id="menu" v-on:click="openNav()"> menu </span>
     <img
       src="https://minio.lattehub.com/img/600/744/resize/60bdc849e0db61849045908f/2021/06/07/lattehub-image-60bdd1cef27e5925329a45c9.png"
       width="150pc"
@@ -77,15 +77,187 @@
         </li>
       </ul>
     </nav>
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" v-on:click="closeNav()"
+        >&times;</a
+      >
+      <hr />
+      <div class="overlay-content">
+        <li>
+          <a href="#" v-on:click="openMiniBeauty()"
+            ><p>Beauty</p>
+            <span class="material-icons"> add </span></a
+          >
+          <ul id="beauty">
+            <a href="#" class="mini">Hair Care</a>
+            <a href="#" class="mini">Nail Art</a>
+          </ul>
+        </li>
+        <li>
+          <a href="#" v-on:click="openMiniWomen()"
+            ><p>Women's Accessories</p>
+            <span class="material-icons"> add </span></a
+          >
+          <ul id="women">
+            <a href="#" class="mini">Jewelry & Accessories</a>
+            <a href="#" class="mini">Footwear & Accessories</a>
+            <a href="#" class="mini">Leggings</a>
+            <a href="#" class="mini">Bag & Accessories</a>
+          </ul>
+        </li>
+        <li>
+          <a href="#" v-on:click="openMiniHealth()"
+            ><p>Health Care</p>
+            <span class="material-icons"> add </span></a
+          >
+          <ul id="health">
+            <a href="#" class="mini">Health</a>
+          </ul>
+        </li>
+        <li>
+          <a href="#" v-on:click="openMiniLife()"
+            ><p>Life Styles</p>
+            <span class="material-icons"> add </span></a
+          >
+          <ul id="life">
+            <a href="#" class="mini">Home Improvement</a>
+            <a href="#" class="mini">Toys</a>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><p>About Us</p></a>
+        </li>
+        <li>
+          <a href="#"><p>Contract Us</p></a>
+        </li>
+        <li>
+          <a href="#"><p>FAQs</p></a>
+        </li>
+      </div>
+    </div>
   </div>
 </template>
 <script>
-
 export default {
+  methods: {
+    openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    },
+
+    closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    },
+    openMiniBeauty() {
+      document.getElementById("beauty").classList.toggle("show");
+      if(document.getElementById("women").classList.contains("show")){
+          document.getElementById("women").classList.remove("show");
+      }
+       if(document.getElementById("health").classList.contains("show")){
+          document.getElementById("health").classList.remove("show");
+      }
+       if(document.getElementById("life").classList.contains("show")){
+          document.getElementById("life").classList.remove("show");
+      }
+    },
+    openMiniWomen() {
+      document.getElementById("women").classList.toggle("show");
+      if(document.getElementById("beauty").classList.contains("show")){
+          document.getElementById("beauty").classList.remove("show");
+      }
+       if(document.getElementById("health").classList.contains("show")){
+          document.getElementById("health").classList.remove("show");
+      }
+       if(document.getElementById("life").classList.contains("show")){
+          document.getElementById("life").classList.remove("show");
+      }
+    },
+    openMiniHealth() {
+      document.getElementById("health").classList.toggle("show");
+      if(document.getElementById("beauty").classList.contains("show")){
+          document.getElementById("beauty").classList.remove("show");
+      }
+       if(document.getElementById("women").classList.contains("show")){
+          document.getElementById("women").classList.remove("show");
+      }
+       if(document.getElementById("life").classList.contains("show")){
+          document.getElementById("life").classList.remove("show");
+      }
+    },
+    openMiniLife() {
+      document.getElementById("life").classList.toggle("show");
+      if(document.getElementById("beauty").classList.contains("show")){
+          document.getElementById("beauty").classList.remove("show");
+      }
+       if(document.getElementById("health").classList.contains("show")){
+          document.getElementById("health").classList.remove("show");
+      }
+       if(document.getElementById("women").classList.contains("show")){
+          document.getElementById("women").classList.remove("show");
+      }
+    },
+  },
 };
 </script>
 <style scoped lang='css'>
-#menu{
+.mini{
+  font-size: 15px !important;
+}
+.show {
+  display: block;
+}
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  margin-top: 0%;
+}
+.overlay-content li a {
+  margin-bottom: 2%;
+  display: inline-block;
+  width: 100%;
+}
+.overlay-content li a ul {
+  background-color: #f1f1f1;
+}
+.overlay-content li a p {
+  display: inline-block;
+
+  width: 300px;
+  margin: auto;
+}
+.overlay-content li a span {
+  display: inline;
+  margin-right: 0px;
+  text-align: right;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+}
+
+#menu {
   display: none;
 }
 #search-a {
@@ -159,7 +331,6 @@ ul li ul {
   left: 0;
   display: none;
 }
-
 ul li:hover > ul,
 ul li:focus-within > ul,
 ul li ul:hover {
@@ -178,7 +349,9 @@ ul li ul li:hover {
 ul li ul li a:hover {
   color: #4f4f4f;
 }
-
+#myNav {
+  visibility: hidden;
+}
 @media screen and (max-width: 600px) {
   #search-a {
     border: 0;
@@ -197,9 +370,12 @@ ul li ul li a:hover {
   ul {
     display: none;
   }
-  #menu{
+  #menu {
     display: inline;
     padding-left: 5%;
+  }
+  #myNav {
+    visibility: visible;
   }
 }
 </style>
