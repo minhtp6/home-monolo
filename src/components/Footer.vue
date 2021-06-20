@@ -83,8 +83,7 @@
       <div class="overlay-content">
         <li>
           <a v-on:click="openMiniContact()"
-            ><p>Contact Us</p>
-            <span class="material-icons"> expand_more </span></a
+            ><p>Contact Us<span class="material-icons"> expand_more </span></p></a
           >
           <ul id="contact">
             <span
@@ -97,8 +96,7 @@
         </li>
         <li>
           <a v-on:click="openMiniPolicies()"
-            ><p>Our Policies</p>
-            <span class="material-icons"> expand_more </span></a
+            ><p>Our Policies<span class="material-icons"> expand_more </span></p></a
           >
           <ul id="policies">
             <a class="mini">Privacy policy</a>
@@ -111,8 +109,7 @@
         </li>
         <li>
           <a v-on:click="openMiniHelp()"
-            ><p>Help Center</p>
-            <span class="material-icons"> expand_more </span></a
+            ><p>Help Center<span class="material-icons"> expand_more </span></p></a
           >
           <ul id="help">
             <a class="mini">Contact Us</a>
@@ -171,7 +168,6 @@ export default {
   display: block;
 }
 .overlay {
-  z-index: 1;
   width: 100%;
   margin: 0;
   background-color: #f1f1f1;
@@ -194,12 +190,12 @@ export default {
 .overlay-content li a ul {
   background-color: #f1f1f1;
 }
-.overlay-content li a p {
+/* .overlay-content li a p {
   display: inline-block;
 
-  width: 300px;
+  width: 350px;
   margin: auto;
-}
+} */
 .overlay-content li a span {
   display: inline;
   margin-right: 0px;
@@ -238,7 +234,11 @@ export default {
   padding-left: 25%;
 }
 hr {
-  width: 50%;
+  margin-left: 25%;
+  width: 57%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  padding: 0%;
 }
 
 .footer-custom:after {
@@ -264,6 +264,9 @@ hr {
   width: 25%;
   float: left;
   box-sizing: border-box;
+  margin-right: 80px;
+  margin-bottom: 0%;
+  padding-bottom: 0%;
 }
 
 .ftr-links-sub {
@@ -323,15 +326,17 @@ hr {
   }
   ul {
     display: none;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
   }
   li {
     list-style-type: none;
   }
-  li ul {
-    list-style-type: none;
-  }
+  .overlay-content li{
+    padding-bottom: 0%;
+    padding-top: 0%;
+  margin-bottom: 0%;
+  margin-top: 0%;
+  display: inline-block;
+  width: 100%;
+}
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header id="header" />
- 
+    <br>
     <Banner v-bind:banner="banners[0]"/>
     <br>
     <b id="colection">Collection list</b>
@@ -177,19 +177,23 @@ export default {
 </script>
 
 <style>
-#app div{
-  margin-bottom: 2%;
-}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   margin-top: 0%;
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 #header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  opacity: 95%;
+  margin-top:0% ;
+  margin-bottom: 1%;
+  z-index: 1;
+  padding-top: 0%;
 }
 #colection{
   text-align: center;
@@ -233,6 +237,9 @@ img{
   margin: 0;
 }
 @media screen and (max-width: 600px) {
+  #app div{
+  margin-bottom: 2%;
+}
   #app{
     padding: 0;
     margin: 0;
