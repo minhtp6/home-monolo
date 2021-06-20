@@ -82,7 +82,7 @@
       />
       <div class="overlay-content">
         <li>
-          <a href="#" v-on:click="openMiniContact()"
+          <a v-on:click="openMiniContact()"
             ><p>Contact Us</p>
             <span class="material-icons"> expand_more </span></a
           >
@@ -96,30 +96,30 @@
           </ul>
         </li>
         <li>
-          <a href="#" v-on:click="openMiniPolicies()"
+          <a v-on:click="openMiniPolicies()"
             ><p>Our Policies</p>
             <span class="material-icons"> expand_more </span></a
           >
           <ul id="policies">
-            <a href="#" class="mini">Privacy policy</a>
-            <a href="#" class="mini">Terms of services</a>
-            <a href="#" class="mini">Refund policy</a>
-            <a href="#" class="mini">Shipping policy</a>
-            <a href="#" class="mini">DCMA</a>
-            <a href="#" class="mini">DCMA Report</a>
+            <a class="mini">Privacy policy</a>
+            <a class="mini">Terms of services</a>
+            <a class="mini">Refund policy</a>
+            <a class="mini">Shipping policy</a>
+            <a class="mini">DCMA</a>
+            <a class="mini">DCMA Report</a>
           </ul>
         </li>
         <li>
-          <a href="#" v-on:click="openMiniHelp()"
+          <a v-on:click="openMiniHelp()"
             ><p>Help Center</p>
             <span class="material-icons"> expand_more </span></a
           >
           <ul id="help">
-            <a href="#" class="mini">Contact Us</a>
-            <a href="#" class="mini">FAQs</a>
-            <a href="#" class="mini">Cancel/Change Order</a>
-            <a href="#" class="mini">support@monolom.com</a>
-            <a href="#" class="mini">Mon - Sat: 9AM - 6PM EST</a>
+            <a class="mini">Contact Us</a>
+            <a class="mini">FAQs</a>
+            <a class="mini">Cancel/Change Order</a>
+            <a class="mini">support@monolom.com</a>
+            <a class="mini">Mon - Sat: 9AM - 6PM EST</a>
           </ul>
         </li>
       </div>
@@ -323,6 +323,15 @@ hr {
   }
   ul {
     display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style-type: none;
+  }
+  li ul {
+    list-style-type: none;
   }
 }
 </style>
