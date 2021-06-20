@@ -22,6 +22,8 @@
     <ItemRecommendation v-bind:items="itemsRecommendation"/>
     <br>
     <IconBanner/>
+    <Review id="review"/>
+    <br>
     <Footer />
   </div>
 </template>
@@ -35,6 +37,7 @@ import BestSelling from "./components/BestSelling.vue"
 import DressBanner from "./components/DressBanner.vue"
 import ItemRecommendation from "./components/ItemRecommendation.vue"
 import IconBanner from "./components/IconBanner.vue"
+import Review from "./components/Review.vue"
 export default {
   name: "App",
   components: {
@@ -45,7 +48,8 @@ export default {
     BestSelling,
     DressBanner,
     ItemRecommendation,
-    IconBanner
+    IconBanner,
+    Review
   },
   data() {
     return {
@@ -276,6 +280,10 @@ img{
 .titleHome{
   padding-left: 30%;
   font-size: 180%;
+}
+#review{
+  margin-top: 0%;
+  padding-top: 0%;
 }
 }
 </style>
