@@ -40,6 +40,9 @@
 export default {};
 </script>
 <style scoped lang='css'>
+.material-icons{
+  font-size: 200%;
+}
 .mobile {
   display: none;
 }

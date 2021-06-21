@@ -196,7 +196,7 @@ export default {
   opacity: 95%;
   margin-top:0% ;
   margin-bottom: 1%;
-  z-index: 1;
+  z-index: 100;
   padding-top: 0%;
 }
 #colection{
