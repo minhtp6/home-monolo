@@ -186,18 +186,15 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  margin-top: 0%;
   overflow-x: hidden; 
 }
 #header {
   position: fixed;
   width: 100%;
   background-color: white;
-  opacity: 95%;
+  opacity: 90%;
   margin-top:0% ;
-  margin-bottom: 1%;
   z-index: 100;
-  padding-top: 0%;
 }
 #colection{
   text-align: center;

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <span id='header'>
     <span class="material-icons" id="menu" v-on:click="openNav()"> menu </span>
     <img
       src="https://minio.lattehub.com/img/600/744/resize/60bdc849e0db61849045908f/2021/06/07/lattehub-image-60bdd1cef27e5925329a45c9.png"
@@ -135,7 +135,7 @@
         </li>
       </div>
     </div>
-  </div>
+  </span>
 </template>
 <script>
 export default {
@@ -199,6 +199,11 @@ export default {
 };
 </script>
 <style scoped lang='css'>
+#header{
+  margin-top: 0%;
+  margin-bottom: 0%;
+  padding-top: 1%;
+}
 .mini{
   font-size: 15px !important;
 }
@@ -229,7 +234,7 @@ export default {
   width: 100%;
 }
 .overlay-content li a ul {
-  background-color: #f1f1f1;
+  background-color: white;
 }
 .overlay-content li a p {
   display: inline-block;
