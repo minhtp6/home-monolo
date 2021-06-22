@@ -241,6 +241,12 @@ hr {
   margin-bottom: 0%;
   padding: 0%;
 }
+span{
+  line-height: 150%;
+}
+a{
+  line-height: 150%;
+}
 
 .footer-custom:after {
   display: table;
@@ -339,6 +345,9 @@ hr {
   margin-top: 0%;
   display: inline-block;
   width: 100%;
+}
+.material-icons{
+  vertical-align: sub;
 }
 }
 </style>
