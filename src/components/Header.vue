@@ -213,8 +213,6 @@ export default {
 .overlay {
   height: 100%;
   width: 0;
-  position: fixed;
-  z-index: 1;
   top: 0;
   left: 0;
   background-color: white;
@@ -223,22 +221,18 @@ export default {
 }
 
 .overlay-content {
-  position: relative;
   width: 100%;
   text-align: left;
   margin-top: 0%;
 }
 .overlay-content li a {
   margin-bottom: 2%;
-  display: inline-block;
   width: 100%;
 }
 .overlay-content li a ul {
   background-color: white;
 }
 .overlay-content li a p {
-  display: inline-block;
-
   width: 300px;
   margin: auto;
 }
@@ -342,6 +336,7 @@ ul li ul:hover {
   visibility: visible;
   opacity: 1;
   display: block;
+  background-color: white;
 }
 
 ul li ul li {
@@ -355,7 +350,7 @@ ul li ul li a:hover {
   color: #4f4f4f;
 }
 #myNav {
-  visibility: hidden;
+  display: none;
 }
 @media screen and (max-width: 600px) {
   #search-a {
@@ -380,7 +375,7 @@ ul li ul li a:hover {
     padding-left: 5%;
   }
   #myNav {
-    visibility: visible;
+    display: block;
   }
 }
 </style>

@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <Header id="header" />
-    <br>
-    <Banner v-bind:banner="banners[0]"/>
+    <Banner v-bind:banner="banners[0]" id='banner'/>
     <br>
     <b id="colection">Collection list</b>
     <Collection/>
@@ -23,7 +22,6 @@
     <br>
     <IconBanner/>
     <Review id="review"/>
-    <br>
     <Footer />
   </div>
 </template>
@@ -188,12 +186,19 @@ export default {
   color: #2c3e50;
   overflow-x: hidden; 
 }
+#banner{
+  margin-top: 7%;
+}
+#review{
+  margin-bottom: 5%;
+}
 #header {
   position: fixed;
   width: 100%;
   background-color: white;
   opacity: 90%;
-  margin-top:0% ;
+  height: 12%;
+  top:0;
   z-index: 100;
 }
 #colection{
@@ -221,7 +226,7 @@ text-align: center;
 .barHome{
   padding-top: 1%;
   padding-bottom: 0%;
-  margin-bottom: 0%;
+  margin-bottom: 1%;
 }
 .buttonHome{
   margin-left: 36%;
@@ -240,6 +245,12 @@ img{
 @media screen and (max-width: 600px) {
   #app div{
   margin-bottom: 2%;
+}
+#banner{
+  margin-top: 12.5%;
+}
+#header{
+  height: 6%;
 }
   #app{
     padding: 0;

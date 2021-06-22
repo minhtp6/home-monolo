@@ -55,7 +55,7 @@ export default {};
   font-size: 100%;
   color: white;
   border: solid;
-  width: 14px;
+  width: 15px;
   background-color: green;
 }
 .c {
