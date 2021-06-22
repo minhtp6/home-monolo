@@ -238,9 +238,15 @@ text-align: center;
   width: 10%;
   height: 3pc;
 }
+.buttonHome:hover{
+  cursor: pointer;
+}
 img{
   padding: 0;
   margin: 0;
+}
+img:hover{
+  cursor: pointer;
 }
 @media screen and (max-width: 600px) {
   #app div{

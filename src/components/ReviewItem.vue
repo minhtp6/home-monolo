@@ -76,6 +76,9 @@ export default {};
   padding: 20%;
   width: 100%;
 }
+.button button:hover{
+  cursor: pointer;
+}
 @media screen and (max-width: 600px){
 .all{
     width: 100%;

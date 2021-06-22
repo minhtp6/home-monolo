@@ -142,10 +142,14 @@ export default {
   methods: {
     openNav() {
       document.getElementById("myNav").style.width = "100%";
+      document.getElementById("myNav").style.height= "100pc";
+      document.getElementById("myNav").style.backgroundColor="white";
     },
 
     closeNav() {
       document.getElementById("myNav").style.width = "0%";
+      document.getElementById("myNav").style.height="0%";
+      document.getElementById("myNav").style.backgroundColor="none";
     },
     openMiniBeauty() {
       document.getElementById("beauty").classList.toggle("show");
@@ -202,7 +206,13 @@ export default {
 #header{
   margin-top: 0%;
   margin-bottom: 0%;
-  padding-top: 1%;
+  padding-top: 0.5%;
+}
+img:hover{
+  cursor: pointer;
+}
+i:hover{
+  cursor: pointer;
 }
 .mini{
   font-size: 15px !important;
@@ -341,9 +351,10 @@ ul li ul:hover {
 
 ul li ul li {
   clear: both;
-  width: 100%;
+  width: 80%;
 }
 ul li ul li:hover {
+  width: 75%;
   background-color: gainsboro;
 }
 ul li ul li a:hover {

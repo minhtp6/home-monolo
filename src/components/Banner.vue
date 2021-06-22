@@ -59,6 +59,9 @@ button{
     font-weight: bold;
     background-color: white;
 }
+button:hover{
+  cursor: pointer;
+}
 @media screen and (max-width: 600px) {
     .centered {
   position: relative;
