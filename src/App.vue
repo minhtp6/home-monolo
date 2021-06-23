@@ -248,6 +248,45 @@ img{
 img:hover{
   cursor: pointer;
 }
+@media screen and (max-width: 800px){
+  .titleHome{
+  padding-left: 1%;
+  font-size: 180%;
+}
+.barHome{
+  padding-top: 1%;
+  padding-bottom: 0%;
+  margin-bottom: 1%;
+}
+.buttonHome{
+  margin-left: 42%;
+  border: none;
+  background-color: #0654f3 !important;
+  color: white !important;
+  font-size: 100% !important;
+  font-weight: bold;
+  width: 30%;
+  height: 3pc;
+}
+#colection{
+  text-align: center;
+  padding-left: 40%;
+  font-size: 150%;
+  font-weight: bold;
+}
+#seller{
+  text-align: center;
+  padding-left: 38%;
+  font-size: 150%;
+  font-weight: bold;
+}
+#recomendation{
+text-align: center;
+  padding-left: 15%;
+  font-size: 150%;
+  font-weight: bold;
+}
+}
 @media screen and (max-width: 600px) {
   #app div{
   margin-bottom: 2%;
